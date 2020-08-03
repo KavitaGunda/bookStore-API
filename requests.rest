@@ -1,0 +1,129 @@
+### Main Route
+GET http://localhost:3000/api
+Content-Type: application/json
+
+### authentication / login
+POST http://localhost:3000/api/auth
+Book-Store-App-Key: 53b081da-bf25-448b-82db-cd0618afc2b8
+Content-Type: application/json
+
+{
+    "email": "gunda@gmail.com",
+    "password": "123456"
+}
+
+### Register / add user
+POST http://localhost:3000/api/createUser
+Content-Type: application/json
+
+{
+    "name": "XYZ",
+    "email": "gunda@gmail.com",
+    "password": "XYZ123##"
+}
+
+### get my profile
+GET http://localhost:3000/api/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjI4MmFhOGJmZmI3NWUyN2NlNzM1ZWMiLCJlbWFpbCI6Imd1bmRhQGdtYWlsLmNvbSIsImFwcEtleSI6IjUzYjA4MWRhLWJmMjUtNDQ4Yi04MmRiLWNkMDYxOGFmYzJiOCIsImlhdCI6MTU5NjQ3NjA1MywiZXhwIjoxNTk2NDc2OTUzfQ.QK20fFG4ClezlzPgNoBhmLYFdK9VILoFZqAzIMPHB78
+Book-Store-App-Key: 53b081da-bf25-448b-82db-cd0618afc2b8
+Content-Type: application/json
+
+### save or update profile
+POST http://localhost:3000/api/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjI4MmFhOGJmZmI3NWUyN2NlNzM1ZWMiLCJlbWFpbCI6Imd1bmRhQGdtYWlsLmNvbSIsImFwcEtleSI6IjUzYjA4MWRhLWJmMjUtNDQ4Yi04MmRiLWNkMDYxOGFmYzJiOCIsImlhdCI6MTU5NjQ3NjA1MywiZXhwIjoxNTk2NDc2OTUzfQ.QK20fFG4ClezlzPgNoBhmLYFdK9VILoFZqAzIMPHB78
+Book-Store-App-Key: 53b081da-bf25-448b-82db-cd0618afc2b8
+Content-Type: application/json
+
+{
+    "favGenre": "Thrillers"
+}
+
+### change profile password
+POST http://localhost:3000/api/profile/changePassword
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjI4MmFhOGJmZmI3NWUyN2NlNzM1ZWMiLCJlbWFpbCI6Imd1bmRhQGdtYWlsLmNvbSIsImFwcEtleSI6IjUzYjA4MWRhLWJmMjUtNDQ4Yi04MmRiLWNkMDYxOGFmYzJiOCIsImlhdCI6MTU5NjQ3NjA1MywiZXhwIjoxNTk2NDc2OTUzfQ.QK20fFG4ClezlzPgNoBhmLYFdK9VILoFZqAzIMPHB78
+Book-Store-App-Key: 53b081da-bf25-448b-82db-cd0618afc2b8
+Content-Type: application/json
+
+{
+    "password": "123456"
+}
+
+### delete profile
+DELETE http://localhost:3000/api/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjI4MmFhOGJmZmI3NWUyN2NlNzM1ZWMiLCJlbWFpbCI6Imd1bmRhQGdtYWlsLmNvbSIsImFwcEtleSI6IjUzYjA4MWRhLWJmMjUtNDQ4Yi04MmRiLWNkMDYxOGFmYzJiOCIsImlhdCI6MTU5NjQ3NjA1MywiZXhwIjoxNTk2NDc2OTUzfQ.QK20fFG4ClezlzPgNoBhmLYFdK9VILoFZqAzIMPHB78
+Book-Store-App-Key: 53b081da-bf25-448b-82db-cd0618afc2b8
+Content-Type: application/json
+
+### get all users
+GET http://localhost:3000/api/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjI4MmFhOGJmZmI3NWUyN2NlNzM1ZWMiLCJlbWFpbCI6Imd1bmRhQGdtYWlsLmNvbSIsImFwcEtleSI6IjUzYjA4MWRhLWJmMjUtNDQ4Yi04MmRiLWNkMDYxOGFmYzJiOCIsImlhdCI6MTU5NjQ3NjA1MywiZXhwIjoxNTk2NDc2OTUzfQ.QK20fFG4ClezlzPgNoBhmLYFdK9VILoFZqAzIMPHB78
+Book-Store-App-Key: 53b081da-bf25-448b-82db-cd0618afc2b8
+Content-Type: application/json
+
+### get user by :user_id [Used by - Admin Role]
+GET http://localhost:3000/api/user/5f282aa8bffb75e27ce735ec
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjI4MmFhOGJmZmI3NWUyN2NlNzM1ZWMiLCJlbWFpbCI6Imd1bmRhQGdtYWlsLmNvbSIsImFwcEtleSI6IjUzYjA4MWRhLWJmMjUtNDQ4Yi04MmRiLWNkMDYxOGFmYzJiOCIsImlhdCI6MTU5NjQ3NjA1MywiZXhwIjoxNTk2NDc2OTUzfQ.QK20fFG4ClezlzPgNoBhmLYFdK9VILoFZqAzIMPHB78
+Book-Store-App-Key: 53b081da-bf25-448b-82db-cd0618afc2b8
+Content-Type: application/json
+
+### delete user by :user_id [Used by - Admin Role]
+DELETE  http://localhost:3000/api/user/5f282aa8bffb75e27ce735ec
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjI4MmFhOGJmZmI3NWUyN2NlNzM1ZWMiLCJlbWFpbCI6Imd1bmRhQGdtYWlsLmNvbSIsImFwcEtleSI6IjUzYjA4MWRhLWJmMjUtNDQ4Yi04MmRiLWNkMDYxOGFmYzJiOCIsImlhdCI6MTU5NjQ3NjA1MywiZXhwIjoxNTk2NDc2OTUzfQ.QK20fFG4ClezlzPgNoBhmLYFdK9VILoFZqAzIMPHB78
+Book-Store-App-Key: 53b081da-bf25-448b-82db-cd0618afc2b8
+Content-Type: application/json
+
+### POST Books / create a book
+POST  http://localhost:3000/api/books
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjI4MmFhOGJmZmI3NWUyN2NlNzM1ZWMiLCJlbWFpbCI6Imd1bmRhQGdtYWlsLmNvbSIsImFwcEtleSI6IjUzYjA4MWRhLWJmMjUtNDQ4Yi04MmRiLWNkMDYxOGFmYzJiOCIsImlhdCI6MTU5NjQ3NjA1MywiZXhwIjoxNTk2NDc2OTUzfQ.QK20fFG4ClezlzPgNoBhmLYFdK9VILoFZqAzIMPHB78
+Book-Store-App-Key: 53b081da-bf25-448b-82db-cd0618afc2b8
+Content-Type: application/json
+
+{
+    "title": "Harry Potter and the Deathl... Harry Potter and the Deathly Hallows (Harry Potter)",
+    "category": "Thriller",
+    "author": "J K Rowling",
+    "totalChapter": 11,
+    "currentChapter": 1
+}
+
+### GET All Books
+GET  http://localhost:3000/api/books
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjI4MmFhOGJmZmI3NWUyN2NlNzM1ZWMiLCJlbWFpbCI6Imd1bmRhQGdtYWlsLmNvbSIsImFwcEtleSI6IjUzYjA4MWRhLWJmMjUtNDQ4Yi04MmRiLWNkMDYxOGFmYzJiOCIsImlhdCI6MTU5NjQ3NjA1MywiZXhwIjoxNTk2NDc2OTUzfQ.QK20fFG4ClezlzPgNoBhmLYFdK9VILoFZqAzIMPHB78
+Book-Store-App-Key: 53b081da-bf25-448b-82db-cd0618afc2b8
+Content-Type: application/json
+
+### GET Book by book_id
+GET  http://localhost:3000/api/books/5f27dae15c0095b5a8e66c20
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjI4MmFhOGJmZmI3NWUyN2NlNzM1ZWMiLCJlbWFpbCI6Imd1bmRhQGdtYWlsLmNvbSIsImFwcEtleSI6IjUzYjA4MWRhLWJmMjUtNDQ4Yi04MmRiLWNkMDYxOGFmYzJiOCIsImlhdCI6MTU5NjQ3NjA1MywiZXhwIjoxNTk2NDc2OTUzfQ.QK20fFG4ClezlzPgNoBhmLYFdK9VILoFZqAzIMPHB78
+Book-Store-App-Key: 53b081da-bf25-448b-82db-cd0618afc2b8
+Content-Type: application/json
+
+### DELETE Book by book_id
+DELETE  http://localhost:3000/api/books/5f27db105c0095b5a8e66c21
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjI4MmFhOGJmZmI3NWUyN2NlNzM1ZWMiLCJlbWFpbCI6Imd1bmRhQGdtYWlsLmNvbSIsImFwcEtleSI6IjUzYjA4MWRhLWJmMjUtNDQ4Yi04MmRiLWNkMDYxOGFmYzJiOCIsImlhdCI6MTU5NjQ3NjA1MywiZXhwIjoxNTk2NDc2OTUzfQ.QK20fFG4ClezlzPgNoBhmLYFdK9VILoFZqAzIMPHB78
+Book-Store-App-Key: 53b081da-bf25-448b-82db-cd0618afc2b8
+Content-Type: application/json
+
+
+
+### PUT / Update Book by book_id
+PUT  http://localhost:3000/api/books/5f27db105c0095b5a8e66c21
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjI4MmFhOGJmZmI3NWUyN2NlNzM1ZWMiLCJlbWFpbCI6Imd1bmRhQGdtYWlsLmNvbSIsImFwcEtleSI6IjUzYjA4MWRhLWJmMjUtNDQ4Yi04MmRiLWNkMDYxOGFmYzJiOCIsImlhdCI6MTU5NjQ3NjA1MywiZXhwIjoxNTk2NDc2OTUzfQ.QK20fFG4ClezlzPgNoBhmLYFdK9VILoFZqAzIMPHB78
+Book-Store-App-Key: 53b081da-bf25-448b-82db-cd0618afc2b8
+Content-Type: application/json
+
+{
+    "title": "All the Light We Cannot See, Anthony Doerr",
+    "category": "Historical Fiction",
+    "author": "Anthony Doerr",
+    "totalChapter": 11,
+    "currentChapter": 1
+}
+
+
+### Search Book by Title, Author or category
+GET  http://localhost:3000/api/books/search/J K Rowling
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjI4MmFhOGJmZmI3NWUyN2NlNzM1ZWMiLCJlbWFpbCI6Imd1bmRhQGdtYWlsLmNvbSIsImFwcEtleSI6IjUzYjA4MWRhLWJmMjUtNDQ4Yi04MmRiLWNkMDYxOGFmYzJiOCIsImlhdCI6MTU5NjQ3NjA1MywiZXhwIjoxNTk2NDc2OTUzfQ.QK20fFG4ClezlzPgNoBhmLYFdK9VILoFZqAzIMPHB78
+Book-Store-App-Key: 53b081da-bf25-448b-82db-cd0618afc2b8
+Content-Type: application/json
+
