@@ -1,0 +1,21 @@
+{
+    "Server":{
+        "API": {
+            "name": "The Book Store REST API",
+            "port": 3000,
+            "expiresIn": "15m"
+        },
+        "Authentication": {
+            "name": "The Authentication Server API",
+            "port": 4000,
+            "expiresIn": "15m"
+        }
+    },
+    "Database": {
+        "MongoDB": {
+            "host": "localhost",
+            "port": 27017,
+            "dbName": "bookStore"
+        }
+    }
+}
